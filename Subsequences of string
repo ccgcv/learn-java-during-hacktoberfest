@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+public class Main
+{
+    static void printsub(String str,String res)
+    {
+        if(str.length()==0)
+        System.out.print(res +", ");
+        else
+        {
+        printsub(str.substring(1),res);
+        printsub(str.substring(1),res+str.charAt(0));
+        }
+    }
+	public static void main(String[] args) 
+	{
+		printsub("abc","");
+	}
+}
+
